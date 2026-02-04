@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "skyqol",
+  "version": "${version}",
+  "name": "SkyQoL",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.skyqol.client.SkyQoLClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "1.21.6",
+    "fabric-api": "*"
+  }
+}

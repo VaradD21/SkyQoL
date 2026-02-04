@@ -1,0 +1,8 @@
+/sqol
+/skyqol test
+/skyqol
+/skyqol gui
+/sk
+/skyqol
+/skyqol test
+/skyqol
