@@ -2,6 +2,7 @@ package com.skyqol.client;
 
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.text.Text;
 
 public class SkyQoLScreen extends Screen {
@@ -11,21 +12,25 @@ public class SkyQoLScreen extends Screen {
     }
 
     @Override
+    protected void init() {
+        this.addDrawableChild(
+                ButtonWidget.builder(Text.literal("Close"), b -> this.close())
+                        .dimensions(this.width / 2 - 50, this.height / 2 + 20, 100, 20)
+                        .build()
+        );
+    }
+
+    @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        // background
-        context.fill(0, 0, this.width, this.height, 0xAA000000);
-
-        // text (manual centering)
-        int x = this.width / 2 - this.textRenderer.getWidth("SkyQoL GUI opened") / 2;
-        int y = this.height / 2;
-
+        context.fill(0, 0, this.width, this.height, 0xFF202020);
         context.drawText(
                 this.textRenderer,
-                "SkyQoL GUI opened",
-                x,
-                y,
+                "SkyQoL GUI OPEN",
+                this.width / 2 - 50,
+                this.height / 2 - 10,
                 0xFFFFFF,
                 true
         );
+        super.render(context, mouseX, mouseY, delta);
     }
 }

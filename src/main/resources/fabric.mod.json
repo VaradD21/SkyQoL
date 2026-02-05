@@ -1,12 +1,8 @@
 {
   "schemaVersion": 1,
   "id": "skyqol",
-  "version": "${version}",
+  "version": "1.0.0",
   "name": "SkyQoL",
-  "description": "",
-  "authors": [],
-  "contact": {},
-  "license": "All-Rights-Reserved",
   "environment": "client",
   "entrypoints": {
     "client": [
